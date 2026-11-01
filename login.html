@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date de Alta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="cbtis-login-body">
+
+    <!-- Contenedor principal de dos columnas -->
+    <div class="cbtis-login-container">
+
+        <!-- LADO IZQUIERDO: Panel Azul con Bienvenida e Ilustración -->
+        <div class="cbtis-left-panel">
+            <div class="cbtis-left-content">
+                
+                <div class="cbtis-illustration-box">
+                    <div class="cbtis-badge-icon">🏥</div>
+                    <h2>¡BIENVENID@ A Servicios de salud!</h2>
+                </div>
+
+                <div class="cbtis-notices-box">
+                    <h3>¡Avisos!</h3>
+                    <p>Consulta tus citas, recetas y vigencias de derechos.</p>
+                </div>
+
+                <div class="cbtis-slider-dots">
+                    <span class="cbtis-dot active"></span>
+                    <span class="cbtis-dot"></span>
+                    <span class="cbtis-dot"></span>
+                </div>
+            </div>
+
+            <div class="cbtis-left-footer">
+                Servicios Médicos &copy; 2026<br>
+                <span>Aviso de privacidad | Términos y condiciones</span>
+            </div>
+        </div>
+
+        <!-- LADO DERECHO: Panel Blanco con el Formulario de Acceso -->
+        <div class="cbtis-right-panel">
+            <div class="cbtis-login-wrapper">
+                
+                <div class="login-back-container">
+                    <a href="index.html" class="cbtis-back-link">← Regresar al inicio</a>
+                </div>
+
+                <div class="cbtis-logo-header">
+                    <div class="login-logo-emoji">🚑</div>
+                    <h1>Servicios <strong>De salud</strong></h1>
+                </div>
+
+                <form id="form-login" action="#" method="POST">
+                    
+                    <div class="cbtis-input-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="cbtis-input-group">
+                        <label for="email">Correo de contacto</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                      
+                    <div class="cbtis-input-group">
+                        <label for="password">Clave de acceso</label>
+                        <input type="password" id="password" name="acceso" placeholder="••••••••" required>
+                    </div>
+
+                     <p style="background:#f0fdf4; border:1px solid #bbf7d0; color:#166534; padding:8px; border-radius:6px; font-size:0.80rem; margin-bottom:10px;">
+                        🔒 Esta registro es una demostración. No se utilizarán tus datos personales.
+                        </p>
+
+                    <button type="submit" class="cbtis-btn-ingresar">REGISTRARSE</button>
+
+                </form>
+
+                <div class="cbtis-login-help">
+                    <a href="#">Tengo dudas</a> | <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

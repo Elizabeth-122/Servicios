@@ -1,0 +1,422 @@
+<!--
+  ======================================================================
+  INSTITUCIÓN: CBTis 166 Pablo Torres Burgos
+  ----------------------------------------------------------------------
+  * Estudiante: López Acosta Elizabeth
+  * Grupo: 3B PRO VESP  
+  * Actividad: Portal Institucional (Con barra superior, collage y formulario)
+  ====================================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR DE CONTACTO -->
+    <div class="top-bar" id="inicio">
+        <div class="top-bar-container">
+            <div class="top-contacts">
+                <span class="top-item">📞 800 000 0000</span>
+                <span class="top-item whatsapp">💬 Escríbenos por <strong>WhatsApp</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- BARRA DE NAVEGACIÓN PRINCIPAL -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#inicio">
+                    <img src="img/logo.webp" alt="Logo" class="brand-logo-img">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#oferta">Servicios</a>
+                <a href="login.html" class="btn-nav-login">Dar de Alta</a>
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- SECCIÓN DE DOS COLUMNAS CON COLLAGE DE IMÁGENES -->
+    <section class="hero-section">
+        <div class="hero-container">
+            
+            <!-- Columna Izquierda: Textos, Botón y Beneficios -->
+            <div class="hero-text-side">
+                <span class="hero-tag">¡TRAMITA TU SEGURO FACULTATIVO!</span>
+                <h1>Tu salud es prioridad: Sistema de citas digitales</h1>
+                <p>Evita filas y agiliza tu tiempo. Agenda, consulta o cancela tu cita medica desde la comodidad de tu hogar</p>
+                
+                <div class="hero-cta-box">
+                    <a href="login.html" class="btn-orange">Date de alta →</a>
+                    <div class="hero-benefits">
+                        <span>✓ Disponible las 24 horas</span>
+                         <span>✓ Tramite 100% seguro</span>
+                        <span>✓ Evita tiempos de espera en ventanilla</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Columna Derecha: Collage de Imágenes -->
+            <div class="hero-image-side">
+                <div class="image-collage">
+                    <div class="collage-main">
+                       <iframe width="560" height="315" src="https://www.youtube.com/embed/X5gCKIQ4U8g?si=Y90M7njumJcARJmg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="collage-sub">
+                        <img src="https://th.bing.com/th/id/R.b16246569564eeed6de5c8aa3217bfc3?rik=QnYleJ3G57Sw9w&riu=http%3a%2f%2fpuntoporpuntotv.com%2fwp-content%2fuploads%2f2023%2f10%2fSaturado-el-IMSS-Cuernavaca-siguen-trabajando-a-gran-capacidad-1024x768.jpg&ehk=q5eIgopV61Ex9MRIPPcJCZq4phIk%2b4VZLDvYMflXWm0%3d&risl=&pid=ImgRaw&r=0" alt="Laboratorista">
+                        <img src="img/doctores.webp" alt="Programación">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE OFERTA EDUCATIVA CON IMÁGENES ALUSIVAS -->
+    <section id="oferta" class="careers-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Servicios</h2>
+                <p>Estos son los servicios con los que cuenta:</p>
+            </div>
+
+            <div class="careers-grid">
+                
+                <!-- Carrera 1: Recursos Humanos -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.SMex23tCClpbx3wAqJj2wgHaD4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Recursos Humanos">
+                    </div>
+                    <div class="career-content">
+                        <h3>Consulta Familiar</h3>
+                        <p>Agenda tu consulta en el turno matutino o vespertino</p>
+                    </div>
+                </div>
+
+                <!-- Carrera 2: Programación -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="https://th.bing.com/th/id/R.180ccead91afdc02e261c7e9dc39caec?rik=%2bVwhKec6Sp%2fadQ&pid=ImgRaw&r=0" alt="Programación">
+                    </div>
+                    <div class="career-content">
+                        <h3>Modulo Preventivo</h3>
+                        <p>Acude por tus vacunas, chequeo de presión, glucosa y asesoría nutricional preventiva sin necesidad de cita previa.</p>
+                    </div>
+                </div>
+
+                <!--  -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="img/estomatología.jpeg" alt="Ciberseguridad">
+                    </div>
+                    <div class="career-content">
+                        <h3>Servicio de Estomatología</h3>
+                        <p>Cuidado integral para tu salud bucal. Agenda limpiezas, extracciones y tratamientos dentales directamente.</p>
+                    </div>
+                </div>
+
+                <!-- Carrera 4: Laboratorista Clínico -->
+                <div class="career-card">
+                    <div class="career-img-container">
+                        <img src="img/rayosx.jpg" alt="Laboratorista Clínico">
+                    </div>
+                    <div class="career-content">
+                        <h3>Laboratorio de Rayos X</h3>
+                        <p>Consulta los requisitos para tus estudios clínicos ordenados por tu médico familiar en nuestro hospital general regional.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE DOCENTES CON RECORRIDO INTERACTIVO (JS) -->
+    <section class="teachers-section">
+        <div class="teachers-container">
+            
+            <div class="teachers-header">
+                <div>
+                    <span class="teachers-tag">¿QUIÉN ATIENDE?</span>
+                    <h2>Nuestra Personal Médico</h2>
+                    <p>Nuestros médicos especialistas brindan atención integral y de calidad en cada consulta.</p>
+                </div>
+                <!-- Botones funcionales con IDs -->
+                <div class="teachers-nav-buttons">
+                    <button id="btn-prev" class="nav-btn">‹</button>
+                    <button id="btn-next" class="nav-btn">›</button>
+                </div>
+            </div>
+
+            <!-- Contenedor de las tarjetas de docentes (controlado por JS) -->
+            <div class="teachers-grid" id="teachers-track">
+                
+                <!-- Grupo 1 (Primeros 4 profesores) -->
+                <div class="teacher-card">
+                    <img src="img/doctora.webp" alt="Doctora">
+                    <div class="teacher-info">
+                        <h3>Dra. Maria Gonzales Peres</h3>
+                        <p>Especialista en Medicina Familiar</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/doctor.webp" alt="Doctor">
+                    <div class="teacher-info">
+                        <h3>Dr. Arturo Salcedo</h3>
+                        <p>Especialista en Medicina interna</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/Doctor2.webp" alt="Doctor">
+                    <div class="teacher-info">
+                        <h3>Dr. Carlos Mendez</h3>
+                        <p>Especialista en medicina familiar/Módulo Preventivo</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/doctora2.webp" alt="Doctora">
+                    <div class="teacher-info">
+                        <h3>Dra.Carmen López</h3>
+                        <p>Especialista en Análisis Clínicos y Laboratorio</p>
+                    </div>
+                </div>
+
+                <!-- Grupo 2 (Otros 4 profesores / Ejemplos adicionales para el recorrido) -->
+                <div class="teacher-card">
+                    <img src="img/doctora3.jpg" alt="Doctora">
+                    <div class="teacher-info">
+                        <h3>Dra Camila Zaragoza</h3>
+                        <p>RayosX e Imagenología</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/doctora4.webp" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>Dentista Guadalupe Chavez</h3>
+                        <p>Encargada del area de Estomatología</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/Doctor3.webp" alt="Doctor">
+                    <div class="teacher-info">
+                        <h3>Pablo García</h3>
+                        <p>Encargado del area de RayosX</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/medico.webp" alt="Profesor">
+                    <div class="teacher-info">
+                        <h3>Médico Felipe Montés</h3>
+                        <p>Consulta General.Seguimiento Preventivo en UMF</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE DOS COLUMNAS CON FORMULARIO INTEGRADO -->
+    <section class="hero-section">
+        <div class="hero-container">
+            
+            <!-- Columna Izquierda: Textos y Beneficios (Estilo UMOV) -->
+            <div class="hero-text-side">
+                <span class="hero-tag">UFM 1 CUERNAVACA DISPONIBILIDAD 24/7</span>
+                <h1 class="hero-title-custom">Agenda tu Cita</h1>
+                <p class="hero-desc-custom">
+                    Clínica en Cuernavaca
+                </p>
+                
+                <div class="hero-subtitle-custom">
+                    Requisitos:
+                </div>
+                <div class="hero-benefits hero-benefits-column">
+                    <span>✓ Estar dado de alta en tu <b>Clínica</b>correspondiente</span>
+                    <span>✓ Contar con vigencia de derechos activa</span>
+                    <span>✓ Tener tu <b>correo electrónico</b> </span>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Tarjeta Flotante con Formulario (10 campos/etiquetas) -->
+            <div class="hero-form-side">
+                <div class="cbtis-hero-form-card">
+                    
+                    <h3 class="form-card-title">
+                        Agenda tu Cita 
+                    </h3>
+
+                    <form id="form-hero-informes" action="#" method="POST">
+                        
+                        <!-- 1. Campo de Texto: Nombre -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <input type="text" id="info_nombre" name="nombre" required placeholder="Nombre del derechoabiente" class="form-control-input">
+                        </div>
+
+
+                        <!-- 2. Campo de Correo Electrónico -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <input type="email" id="info_email" name="email" required placeholder="Correo electrónico" class="form-control-input">
+                        </div>
+
+
+                       
+                         <!-- 3. Campo de Fecha (Date): Fecha estimada de ingreso -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <label for="info_fecha" class="form-date-label">Seleccione la fecha de cita</label>
+                            <input type="date" id="info_fecha" name="fecha" required class="form-control-date">
+                        </div>
+
+                        <!-- 4. Menú Desplegable (Select): Carrera Técnica -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <select id="info_carrera" name="carrera" required class="form-control-select">
+                                <option value="">Seleccione turno </option>
+                                <option value="recursos">Matutino</option>
+                                <option value="programacion">Vespertino</option>
+                            </select>
+                        </div>
+                         <!-- 5. Menú Desplegable (Select): Nivel de Estudios -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <select id="info_nivel" name="nivel" required class="form-control-select">
+                                <option value="">Seleccione el servicio </option>
+                                <option value="media">Familiar</option>
+                                <option value="media">Estomatología</option>
+                                <option value="media">Medicina</option>
+                                <option value="media">Preventivo</option>
+                            </select>
+                        </div>
+
+
+                        <!-- 6. Área de Texto (Textarea): Dudas adicionales -->
+                        <div class="cbtis-input-group form-group-margin">
+                            <textarea id="info_comentarios" name="comentarios" rows="2" placeholder="Escribe tus dudas o comentarios..." class="form-control-textarea"></textarea>
+                        </div>
+
+                      <!-- 7. Casilla de Verificación (Checkbox): Términos y privacidad -->
+                        <div class="cbtis-input-group form-group-checkbox">
+                            <input type="checkbox" id="info_terminos" name="terminos" required class="form-checkbox-input">
+                            <label for="info_terminos" class="form-checkbox-label">
+                                Acepto el aviso de privacidad 
+                            </label>
+                        </div>
+
+                         <p style="background:#f0fdf4; border:1px solid #bbf7d0; color:#166534; padding:8px; border-radius:6px; font-size:0.80rem; margin-bottom:10px;">
+                        🔒 Esta agenda es una demostración. No se utilizarán tus datos personales.
+                        </p>
+
+                        <!-- 8. Botón de Envío (Submit Button) -->
+                        <button type="submit" class="cbtis-btn-ingresar form-submit-btn">
+                            Agendar cita
+                        </button>
+                       
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+   
+
+                <p> Google Maps.</p>
+                <div class="map-container">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2387.199686755925!2d-99.20604366535498!3d18.92147326581789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddfbd3ccdaff7%3A0xf3bea7a84e14e5df!2sHospital%20General%20Regional%2C%20C%2FMF%20No.%201%20del%20IMSS%2C%20Cuernavaca%2C%20Morelos.!5e1!3m2!1ses-419!2smx!4v1793158103427!5m2!1ses-419!2smx" 
+                            width="100%" 
+                            height="350" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade" 
+                            title="Ubicación">
+                    </iframe>
+                    <pre style="background:#f8fafc; border:1px solid #e2e8f0; padding:15px; border-radius:8px; font-size:0.85rem; color:#334155; overflow-x:auto;">
+                <b>UMF 1 - Horarios</b>
+                Consulta:     08:00 - 14:00 hrs
+                Farmacia:     08:00 - 20:00 hrs
+                Preventiva:   08:00 - 14:00 hrs
+
+</pre>
+                </div>
+                </section>
+
+
+    <!-- SECCIÓN DE CONVENIOS DOBLE LÍNEA -->
+    <section class="convenios-section">
+        <div class="convenios-container">
+            
+            <div class="section-header">
+                <span class="teachers-tag convenience-tag-custom">¿QUÉ OFRECE?</span>
+                <h2>Servicios </h2>
+                <p>Atención medica integral para derechohabientes y sus familias </p>
+            </div>
+
+            <!-- LÍNEA 1: Se desplaza hacia la IZQUIERDA -->
+            <div class="marquee-wrapper">
+                <div class="marquee-track marquee-track-top">
+                    <div class="convenio-card">🩺 Consulta Externa</div>
+<div class="convenio-card">💊 Farmacia</div>
+<div class="convenio-card">🧪 Laboratorio</div>
+<div class="convenio-card">📋 Medicina Preventiva</div>
+<div class="convenio-card">👶 Control del Niño Sano</div>
+<div class="convenio-card">🤰 Control Prenatal</div>
+<div class="convenio-card">📝 Trabajo Social</div>
+<div class="convenio-card">💉 Vacunación</div>
+<div class="convenio-card">🏥 Afiliación y Vigencia</div>
+<div class="convenio-card">📅 Citas Digitales</div>
+                </div>
+            </div>
+
+            <!-- LÍNEA 2: Se desplaza hacia la DERECHA -->
+            <div class="marquee-wrapper marquee-wrapper-spacing">
+                <div class="marquee-track marquee-track-bottom">
+                    <div class="convenio-card">🩺 Consulta Externa</div>
+<div class="convenio-card">💊 Farmacia</div>
+<div class="convenio-card">🧪 Laboratorio</div>
+<div class="convenio-card">📋 Medicina Preventiva</div>
+<div class="convenio-card">👶 Control del Niño Sano</div>
+<div class="convenio-card">🤰 Control Prenatal</div>
+<div class="convenio-card">📝 Trabajo Social</div>
+<div class="convenio-card">💉 Vacunación</div>
+<div class="convenio-card">🏥 Afiliación y Vigencia</div>
+<div class="convenio-card">📅 Citas Digitales</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA (FOOTER CON REDES SOCIALES) -->
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-info">
+                <p>Servicios Médicos &copy; 2026</p>
+                <p class="footer-author">Desarrollado por: López Acosta Elizabeth (3B PRO VESP)</p>
+            </div>
+
+            <!-- Enlaces de Redes Sociales -->
+            <div class="footer-socials">
+                <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">f</a>
+                <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">ig</a>
+                <a href="https://whatsapp.com" target="_blank" class="social-icon" title="WhatsApp">💬</a>
+                <a href="https://youtube.com" target="_blank" class="social-icon" title="YouTube"> ▶</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
