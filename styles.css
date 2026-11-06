@@ -85,7 +85,7 @@ body {
 
 .nav-links a {
     text-decoration: none;     /* Quita el subrayado predeterminado de los enlaces */
-    color: #accefd;            /* Color de texto gris intermedio */
+    color: #020a15;            /* Color de texto gris intermedio */
     font-weight: 600;          /* Seminegrita para mejor visibilidad */
     font-size: 0.9rem;         /* Tamaño de fuente adecuado */
     transition: color 0.2s;    /* Transición suave al cambiar de color */
@@ -982,4 +982,261 @@ body {
     background-color: #ffffff;     /* Fondo blanco puro */
     color: #002402;                /* Texto azul corporativo */
     box-shadow: 0 10px 20px rgba(37, 99, 235, 0.08); /* Sombra azulada elegante */
+}
+
+
+
+/* ==========================================
+   2. BARRA DE NAVEGACIÓN PRINCIPAL (.navbar)
+   ========================================== */
+
+.navbar {
+  display: flex;                /* Convierte la barra en un contenedor Flexbox para alinear elementos fácilmente */
+  justify-content: space-between;/* Separa los elementos al máximo (logotipo a la izquierda, hamburguesa a la derecha) */
+  align-items: center;          /* Centra verticalmente los elementos hijos dentro de la barra */
+  background-color: #ffffff;    /* Color de fondo azul muy oscuro (slate) */
+  padding: 1rem 1.5rem;         /* Espaciado interno: 1rem (16px) arriba/abajo y 1.5rem (24px) a los lados */
+  color: #000000;               /* Color predeterminado de texto dentro de la barra */
+  position: relative;           /* Establece contexto de posicionamiento relativo para que .nav-menu pueda posicionarse dinámicamente respecto a él */
+}
+/* Estilos del texto/marca */
+.brand-logo {
+  font-size: 1.5rem;            /* Tamañno de fuente equivalente a 24px */
+  font-weight: bold;            /* Aplica texto en negrita */
+  color: #051319;               /* Color azul claro brillante (sky blue) */
+  text-decoration: none;        /* Quita el subrayado predeterminado de los enlaces */
+}
+
+
+/* ==========================================
+   3. BOTÓN HAMBURGUESA Y SUS BARRAS
+   ========================================== */
+
+.hamburger {
+  display: flex;                /* Habilita Flexbox interno para apilar las 3 barras */
+  flex-direction: column;       /* Alinea las barras verticalmente (una sobre otra) */
+  justify-content: space-between;/* Distribuye el espacio uniformemente entre la primera, segunda y tercera barra */
+  width: 30px;                  /* Ancho total del icono */
+  height: 21px;                 /* Altura total del contenedor del icono */
+  background: transparent;      /* Elimina el fondo predeterminado que los navegadores ponen a los <button> */
+  border: none;                 /* Elimina el borde predeterminado del botón */
+  cursor: pointer;              /* Cambia el puntero del ratón a una mano al pasar por encima */
+}
+
+/* Cada una de las 3 líneas individuales */
+.hamburger .bar {
+  width: 100%;                  /* Ocupa todo el ancho disponible del botón (30px) */
+  height: 3px;                  /* Grosor de cada barra */
+  background-color: #000000;    /* Color blanco de las barras */
+  border-radius: 2px;           /* Redondea suavemente los extremos de las barras */
+  transition: all 0.3s ease-in-out; /* Aplica una animación suave de 0.3 segundos cuando cambia cualquier propiedad CSS */
+}
+
+/* ==========================================
+   4. MENÚ PRINCIPAL Y SUBMENÚS (VISTA MÓVIL)
+   ========================================== */
+
+/* Menú Principal (Móvil) */
+.nav-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.5rem 0;
+  
+  /* Oculto por defecto */
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-link:hover {
+  color: #38bdf8;
+}
+
+/* Indicador de flecha del submenú Nivel 1 */
+.arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+/* SUBMENÚ / SUBÍTEMS NIVEL 1 (Móvil) */
+.dropdown-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea los elementos al centro en móviles */
+  text-align: center;
+}
+
+.submenu {
+  list-style: none;
+  background-color: #ffffff; /* Fondo más oscuro para diferenciar */
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-top: 0.8rem;
+  
+  /* Oculto por defecto */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.submenu-link {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: block;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.submenu-link:hover {
+  color: #38bdf8;
+}
+
+/* SUBMENÚ NIVEL 2 (SUB-SUBMENÚ) EN MÓVIL */
+.arrow-right {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.sub-submenu {
+  list-style: none;
+  background-color: #ffffff; /* Fondo aún más oscuro para dar profundidad */
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  
+  /* Oculto por defecto */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+
+/* ==========================================
+   5. ESTADOS ACTIVOS (INYECTADOS POR JAVASCRIPT)
+   ========================================== */
+
+/* Muestra el menú hamburguesa principal */
+.nav-menu.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* Muestra el submenú de Nivel 1 */
+.submenu.open {
+  display: flex;
+}
+
+/* Muestra el submenú de Nivel 2 */
+.sub-submenu.open {
+  display: flex;
+}
+
+/* Gira la flecha del submenú Nivel 1 */
+.dropdown-btn.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* Gira la flecha del submenú Nivel 2 */
+.dropdown-subbtn.open .arrow-right {
+  transform: rotate(90deg);
+}
+
+/* Animación del botón Hamburguesa a 'X' */
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+
+/* ==========================================
+   6. RESPONSIVIDAD (PANTALLAS GRANDES: PC Y TABLETS)
+   ========================================== */
+
+@media (min-width: 768px) {
+  
+  /* Oculta el botón hamburguesa en escritorio */
+  .hamburger {
+    display: none;
+  }
+
+  /* Convierte la lista principal en una barra horizontal */
+  .nav-menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding: 0;
+    opacity: 1;
+    gap: 2rem;
+  }
+
+  /* SUBMENÚ NIVEL 1 EN ESCRITORIO */
+  .dropdown-item {
+    position: relative; /* Contenedor de referencia para el desplegable */
+    width: auto;
+    display: block;
+  }
+
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: #e9e9e9;
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    margin-top: 0.5rem;
+    align-items: flex-start;
+  }
+
+  /* SUBMENÚ NIVEL 2 EN ESCRITORIO (Despliegue Lateral hacia la izquierda) */
+  .dropdown-subitem {
+    position: relative;
+    width: 100%;
+  }
+
+  .sub-submenu {
+    position: absolute;
+    top: 0;
+    right: 100%; /* Se despliega hacia la IZQUIERDA para no salirse de la pantalla */
+    left: auto;  /* Desactiva la alineación a la izquierda */
+    min-width: 190px;
+    background-color: #e4e4e4;
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    margin-top: 0;
+    align-items: flex-start;
+  }
 }

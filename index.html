@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    
     <!-- BARRA SUPERIOR DE CONTACTO -->
     <div class="top-bar" id="inicio">
         <div class="top-bar-container">
@@ -27,24 +27,71 @@
         </div>
     </div>
 
-    <!-- BARRA DE NAVEGACIÓN PRINCIPAL -->
-    <header class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
+  <!-- BARRA DE NAVEGACIÓN PRINCIPAL -->
+    <header>
+        <nav class="navbar">
+           
                 <a href="#inicio">
                     <img src="img/logo.webp" alt="Logo" class="brand-logo-img">
                 </a>
-            </div>
-            <nav class="nav-links">
-                <a href="#inicio">Inicio</a>
-                <a href="#oferta">Servicios</a>
-                <a href="login.html" class="btn-nav-login">Dar de Alta</a>
-            </nav>
-        </div>
-    </header>
-    
+           
+            
+            <!-- Botón del Menú Hamburguesa (Requerido por el profesor) -->
+            <button type="button" class="hamburger" id="hamburger-btn" aria-label="Abrir menú de navegación">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
 
-    <!-- SECCIÓN DE DOS COLUMNAS CON COLLAGE DE IMÁGENES -->
+            <!-- Lista de Enlaces con el ID requerido -->
+            <ul class="nav-links nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+              
+                <li class="nav-item dropdown-item">
+                  <a href="#" class="nav-link dropdown-btn" id="dropdown-btn">
+                       Servicios <span class="arrow">▾</span>
+                  </a>
+                  <ul class="submenu" id="submenu">
+                     <li class="submenu-item"><a href="#oferta" class="submenu-link">Consulta Familiar</a></li>
+                     <li class="submenu-item"><a href="#oferta" class="submenu-link">Módulo Preventivo</a></li>
+                     <li class="submenu-item"><a href="#oferta" class="submenu-link">Servicio de Estomatología</a></li>
+                      <li class="submenu-item"><a href="#oferta" class="submenu-link">Laboratorio de RayosX</a></li>
+                </ul>
+                </li>
+                
+                 <!-- SUBMENÚS ANIDADOS (NIVEL 1 Y 2): PROYECTOS -->
+        <li class="nav-item dropdown-item">
+          <!-- Botón principal de Proyectos (Nivel 1) -->
+          <a href="#" class="nav-link dropdown-btn" id="dropdown-proyectos-btn">
+            Atención al paciente <span class="arrow">▾</span>
+          </a>
+          
+          <!-- Submenú Nivel 1 (Proyectos) -->
+          <ul class="submenu" id="submenu-proyectos">
+            
+            <!-- Ítem con Submenú Nivel 2 (Desarrollo Web) -->
+            <li class="submenu-item dropdown-subitem">
+              <a href="#" class="submenu-link dropdown-subbtn" id="dropdown-web-btn">
+                Citas y seguimiento<span class="arrow-right">▸</span>
+              </a>
+              
+              <!-- Submenú Nivel 2 (Front-End y Back-End) -->
+              <ul class="sub-submenu" id="sub-submenu-web">
+                <li><a href="#agendar-cita" class="submenu-link">solicital cita</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#personal" class="submenu-link">Nuestros médicos</a></li>
+          </ul>
+        </li>
+
+                <li class="nav-item"><a href="login.html" class="btn-nav-login nav-link">Dar de Alta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="script.js"></script>
+
+      <!-- SECCIÓN DE DOS COLUMNAS CON COLLAGE DE IMÁGENES -->
     <section class="hero-section">
         <div class="hero-container">
             
@@ -144,9 +191,9 @@
         <div class="teachers-container">
             
             <div class="teachers-header">
-                <div>
+                <div  id="personal">
                     <span class="teachers-tag">¿QUIÉN ATIENDE?</span>
-                    <h2>Nuestra Personal Médico</h2>
+                    <h2>Nuestro Personal Médico</h2>
                     <p>Nuestros médicos especialistas brindan atención integral y de calidad en cada consulta.</p>
                 </div>
                 <!-- Botones funcionales con IDs -->
@@ -233,7 +280,6 @@
     <!-- SECCIÓN DE DOS COLUMNAS CON FORMULARIO INTEGRADO -->
     <section class="hero-section">
         <div class="hero-container">
-            
             <!-- Columna Izquierda: Textos y Beneficios (Estilo UMOV) -->
             <div class="hero-text-side">
                 <span class="hero-tag">UFM 1 CUERNAVACA DISPONIBILIDAD 24/7</span>
@@ -254,8 +300,8 @@
 
             <!-- Columna Derecha: Tarjeta Flotante con Formulario (10 campos/etiquetas) -->
             <div class="hero-form-side">
-                <div class="cbtis-hero-form-card">
-                    
+                <div class="cbtis-hero-form-card"   id="agendar-cita">
+                      
                     <h3 class="form-card-title">
                         Agenda tu Cita 
                     </h3>
@@ -411,7 +457,7 @@
                 <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook">f</a>
                 <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">ig</a>
                 <a href="https://whatsapp.com" target="_blank" class="social-icon" title="WhatsApp">💬</a>
-                <a href="https://youtube.com" target="_blank" class="social-icon" title="YouTube"> ▶</a>
+                <a href="https://youtube.com" target="_blank" class="social-icon" title="YouTube"> ▶️</a>
             </div>
 
         </div>

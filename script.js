@@ -88,3 +88,140 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+
+
+
+// --------------------------------------------------------------------------
+// 1. SELECCIÓN DE ELEMENTOS (Capturar los objetos HTML que vamos a manipular)
+// --------------------------------------------------------------------------
+
+// Declara la variable constante 'hamburgerBtn' que busca en el HTML el botón por su atributo id="hamburger-btn".
+const hamburgerBtn = document.getElementById('hamburger-btn');
+
+// Declara la variable constante 'navMenu' que busca en el HTML la lista del menú por su atributo id="nav-menu".
+const navMenu = document.getElementById('nav-menu');
+// --------------------------------------------------------------------------
+// 2. FUNCIÓN AUXILIAR: CERRAR SUBMENÚS (RESPETANDO JERARQUÍA PADRE / HIJO)
+// --------------------------------------------------------------------------
+
+function cerrarTodosLosSubmenus(excepcionBoton = null) {
+  // querySelectorAll selecciona dinámicamente TODOS los botones y submenús usando sus clases CSS
+  const todosLosBotones = document.querySelectorAll('.dropdown-btn, .dropdown-subbtn');
+  const todosLosSubmenus = document.querySelectorAll('.submenu, .sub-submenu');
+
+  todosLosBotones.forEach(boton => {
+    // Si el botón no es la excepción y tampoco es un botón padre de la excepción, le quita la clase 'open'
+    if (boton !== excepcionBoton && !boton.contains(excepcionBoton)) {
+      boton.classList.remove('open');
+    }
+  });
+
+  todosLosSubmenus.forEach(menu => {
+    // Si el submenú no es la excepción y tampoco contiene al botón activo, se oculta
+    if (menu !== excepcionBoton && !menu.contains(excepcionBoton)) {
+      menu.classList.remove('open');
+    }
+  });
+}
+
+
+
+// --------------------------------------------------------------------------
+// 3. EVENTO PRINCIPAL (Abrir y cerrar el menú al presionar el botón)
+// --------------------------------------------------------------------------
+
+
+
+// Escuchamos el clic en el botón de la hamburguesa
+hamburgerBtn.addEventListener('click', () => {
+  
+  // Paso A: Cambia el estado del botón (Pone/quita la clase 'active')
+  hamburgerBtn.classList.toggle('active'); 
+
+  // Paso B: Cambia el estado del menú (Pone/quita la clase 'active')
+  navMenu.classList.toggle('active'); 
+   // Si el usuario cierra el menú hamburguesa completo, se llama a la función VACÍA 
+  // para que cierre TODOS los submenús sin excepción (excepcionBoton = null)
+  if (!navMenu.classList.contains('active')) {
+    cerrarTodosLosSubmenus();
+  }
+});
+
+// --------------------------------------------------------------------------
+// 4. EVENTO PARA SUBMENÚS NIVEL 1 (.dropdown-btn) -> "Servicios", "Proyectos"
+// --------------------------------------------------------------------------
+document.querySelectorAll('.dropdown-btn').forEach(boton => {
+  boton.addEventListener('click', (e) => {
+    /* 
+       e.preventDefault(): Cancela la acción por defecto del enlace <a href="#">.
+       Evita que la página dé un salto brusco hacia arriba al hacer clic.
+    */
+    e.preventDefault();
+
+    // nextElementSibling accede a la lista .submenu que es hermana directa en el HTML
+    const submenuAsociado = boton.nextElementSibling; 
+    const estaAbierto = submenuAsociado.classList.contains('open');
+
+    // Enviamos "boton" como parámetro para que la función SEPA cuál no debe cerrar
+    cerrarTodosLosSubmenus(boton);
+
+    // Abre o cierra el submenú correspondiente
+    if (!estaAbierto) {
+      boton.classList.add('open');
+      submenuAsociado.classList.add('open');
+    } else {
+      boton.classList.remove('open');
+      submenuAsociado.classList.remove('open');
+    }
+  });
+});
+
+// --------------------------------------------------------------------------
+// 5. EVENTO PARA SUBMENÚS NIVEL 2 (.dropdown-subbtn) -> "Desarrollo Web"
+// --------------------------------------------------------------------------
+document.querySelectorAll('.dropdown-subbtn').forEach(subBoton => {
+  subBoton.addEventListener('click', (e) => {
+    // Cancelamos la navegación del enlace de 2º nivel
+    e.preventDefault();
+
+    const subSubmenuAsociado = subBoton.nextElementSibling; // Encuentra la lista hermana .sub-submenu
+    const estaAbierto = subSubmenuAsociado.classList.contains('open');
+
+    // Enviamos "subBoton" para que mantenga abierto este botón y a su menú padre "Proyectos"
+    cerrarTodosLosSubmenus(subBoton);
+
+    // Muestra u oculta las opciones de "Front-End" y "Back-End"
+    if (!estaAbierto) {
+      subBoton.classList.add('open');
+      subSubmenuAsociado.classList.add('open');
+    } else {
+      subBoton.classList.remove('open');
+      subSubmenuAsociado.classList.remove('open');
+    }
+  });
+});
+
+// --------------------------------------------------------------------------
+// 6. CERRAR TODO (MENÚ HAMBURGUESA Y SUBMENÚS) AL HACER CLIC FUERA
+// --------------------------------------------------------------------------
+document.addEventListener('click', (e) => {
+  /*
+     e.target.closest('.navbar'): Busca si el elemento clickeado está DENTRO de .navbar.
+     El símbolo '!' (negación) evalúa si el clic ocurrió FUERA de la barra de navegación.
+  */
+  if (!e.target.closest('.navbar')) {
+
+    // 1. Oculta la lista desplegable del menú principal en móvil
+    navMenu.classList.remove('active');
+
+    // 2. Le quita la animación a la 'X' para restaurar las 3 rayitas de la hamburguesa
+    hamburgerBtn.classList.remove('active');
+
+    // 3. Cierra todos los submenús de nivel 1 y nivel 2 (llamada vacía = sin excepciones)
+    cerrarTodosLosSubmenus();
+  }
+});
+
+
+
